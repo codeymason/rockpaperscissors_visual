@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>	
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+
+    function computerPlay() {
+      let computerOptions = ["rock", "paper", "scissors"];
+      let computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+      return computerChoice;
+    }
+		
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock") {
+        return("tie");
+      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
+	return("lose");
+      } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+	return("win");
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+	return("win");
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "paper") {
+	return("tie");
+      } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
+	return("lose");
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
+	return("lose");
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
+	return("win");
+      } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors") {
+	return("tie");
+      } 
+    }
+
+    function game() {
+      var playerScore = 0;
+      var compScore = 0;
+
+      do {
+        var playerSelection = prompt("Choose your weapon wisely. First to 3 wins.", 'rock, paper, or scissors?');
+	var computerSelection = computerPlay();
+
+        switch (playRound(playerSelection, computerSelection)) {  
+          case "tie":
+	    alert(`You and your opponent both chose ${computerSelection}. It's a tie!`);
+            console.log(`Player score: ${playerScore}`);  
+            console.log(`Computer score: ${compScore}`); 
+            break;
+          case "win":
+            playerScore++;
+            alert(`You chose ${playerSelection} and your opponent chose ${computerSelection}. You win!`);
+            console.log(`Player score: ${playerScore}`);  
+            console.log(`Computer score: ${compScore}`); 
+	    break;
+          case "lose":
+            compScore++;
+            alert(`You chose ${playerSelection} and your opponent chose ${computerSelection}. You lose!`);
+            console.log(`Player score: ${playerScore}`);  
+            console.log(`Computer score: ${compScore}`); 
+            break;
+          default:
+            alert("Did you choose a weapon? Your choices are rock, paper, or scissors.");
+	    console.log("Player input invalid");
+        } 
+      } while (!(playerScore === 3 || compScore === 3));
+		
+      if (playerScore > compScore) {
+        alert("You are the champion, my friend. You kept on fighting till the end.");
+        console.log("Human wins");
+      } else if (playerScore < compScore) {
+        alert("Ding! Ding! We have a winner! And it's not you.");
+        console.log("Computer wins");
+      }		
+    }
+
+game();
+
+	</script>
+</body>
+</html>
