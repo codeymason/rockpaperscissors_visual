@@ -33,7 +33,7 @@ scissorsBtn.addEventListener('click', () => {
 });
 
 //increment scores according to winner of each round and present scores and winner to player. 
-function playRound() {
+function playRound(playerSelection, computerSelection) {
   switch (whoWins(playerSelection, computerSelection)) {  
     case "tie":
       message.textContent = "It's a tie!";      
@@ -104,10 +104,10 @@ function gameOver() {
 resetBtn.addEventListener('click', () => {
   playerScore = 0;
   compScore = 0;
-  message = "";
-  playerScoreBoard = "";
-  compScoreBoard = "";
-  gameWinner = "";
+  message.textContent = "";
+  playerScoreBoard.textContent = "";
+  compScoreBoard.textContent = "";
+  gameWinner.textContent = "";
   document.getElementById("rock").disabled = false;
   document.getElementById("paper").disabled = false;
   document.getElementById("scissors").disabled = false;
