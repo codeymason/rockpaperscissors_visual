@@ -15,23 +15,25 @@ let compScore = 0;
 
 //initiate a series of actions upon click of weapon buttons.
 rockBtn.addEventListener('click', () => {
-  playerSelection = 'rock';
-  playRound();
+  let playerSelection = 'rock';
+  let computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
 });
 
 paperBtn.addEventListener('click', () => {
-  playerSelection = 'paper';
-  playRound();
+  let playerSelection = 'paper';
+  let computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
 });
 
 scissorsBtn.addEventListener('click', () => {
-  playerSelection = 'scissors';
-  playRound();
+  let playerSelection = 'scissors';
+  let computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
 });
 
 //increment scores according to winner of each round and present scores and winner to player. 
 function playRound() {
-  let computerSelection = computerPlay();
   switch (whoWins(playerSelection, computerSelection)) {  
     case "tie":
       message.textContent = "It's a tie!";      
