@@ -1,34 +1,34 @@
 //select elements and assign to variables.
-let rockBtn = document.querySelector('#rock');
-let paperBtn = document.querySelector('#paper');
-let scissorsBtn = document.querySelector('#scissors');
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
 
-let message = document.querySelector('#message');
-let playerScoreBoard = document.querySelector('#player-score');
-let compScoreBoard = document.querySelector('#comp-score');
-let gameWinner = document.querySelector('#game-winner');
-let resetBtn = document.querySelector('#reset-button');
+const message = document.querySelector('#message');
+const playerScoreBoard = document.querySelector('#player-score');
+const compScoreBoard = document.querySelector('#comp-score');
+const gameWinner = document.querySelector('#game-winner');
+const resetBtn = document.querySelector('#reset-button');
 
 //declare player and computer scores and set to 0.
 let playerScore = 0;
 let compScore = 0;
 
-//initiate a series of actions upon click of weapon buttons.
+//upon click of weapon buttons: generate computer selection, assign player selection, and feed both to playRound function.
 rockBtn.addEventListener('click', () => {
-  let playerSelection = 'rock';
-  let computerSelection = computerPlay();
+  const playerSelection = 'rock';
+  const computerSelection = computerPlay();
   playRound(playerSelection, computerSelection);
 });
 
 paperBtn.addEventListener('click', () => {
-  let playerSelection = 'paper';
-  let computerSelection = computerPlay();
+  const playerSelection = 'paper';
+  const computerSelection = computerPlay();
   playRound(playerSelection, computerSelection);
 });
 
 scissorsBtn.addEventListener('click', () => {
-  let playerSelection = 'scissors';
-  let computerSelection = computerPlay();
+  const playerSelection = 'scissors';
+  const computerSelection = computerPlay();
   playRound(playerSelection, computerSelection);
 });
 
@@ -52,8 +52,8 @@ function playRound(playerSelection, computerSelection) {
 
 //generate random weapon for computer to use.
 function computerPlay() {
-  let computerOptions = ["rock", "paper", "scissors"];
-  let computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+  const computerOptions = ["rock", "paper", "scissors"];
+  const computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
   return computerChoice;
 }
 	
