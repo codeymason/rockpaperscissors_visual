@@ -3,21 +3,23 @@
 <head>
   <title>Rock Paper Scissors</title>
   <script type="text/javascript" defer="defer" src="rps_visual.js"></script>
+  <link rel="stylesheet" href="rps_visual.css">
 </head>
 <body>
-  <h1>Rock Paper Scissors, Shoot!</h1>
+  <h1>Rock, Paper, Scissors, Shoot!</h1>
   <h2>Choose your weapon wisely. First to 5 wins.</h2>
-  <div id="message"></div>
   <div id="weapons">
     <button type="button" id="rock">ROCK</button>
     <button type="button" id="paper">PAPER</button>
     <button type="button" id="scissors">SCISSORS</button>
   </div>
-  <div id="scoreContainer">
+  <div id="message"></div>
+  <div id="score-container">
+    <h3>SCOREBOARD</h3>
     <div id="player-score"></div>
     <div id="comp-score"></div>
-    <div id="game-winner"></div>
   </div>
+  <div id="game-winner"></div>
   <button type="button" id="reset-button">Play Again</button>
 </body>
 </html>
