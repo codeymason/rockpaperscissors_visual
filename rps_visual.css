@@ -9,18 +9,20 @@ h1 {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 45px;
   font-weight: normal;
+  margin: 20px 0;
 }
 
 h2 {
   text-align: center;
   color: #43433C;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 18px;
 }
 
-div#weapons {
+/*Weapons selector box*/
+#weapons {
   background-color: #c9ebef;
   border: 4px solid #abcbce; 
   padding: 35px;
@@ -29,7 +31,7 @@ div#weapons {
   text-align: center;
 }
 
-div#weapons button {
+#weapons button {
   background-color: #E36221;
   color: white;
   font-family: Verdana, Geneva, sans-serif;
@@ -46,39 +48,118 @@ div#weapons button {
   font-size: 20px;
 }
 
-div#weapons button:hover {
+#weapons button:hover {
   border: 2px solid #43433C;
   transition-duration: 200ms;
 }
 
-div#message {
-  height: 40px;
-  padding: 10px;
-  margin-top: 18px;
+#weapons button:focus {
+  outline: 0;
+}
+
+/*Score container and round winner declaration*/
+#score-container {
+  background-color: #F2D473;
+  text-align: left;
+  margin-top: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 130px;
+  width: 400px;
+  border: 2px dotted #43433C;
+  position: relative;
+}
+
+#player-score-container {
+  float: left; 
+} 
+
+#human {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
+  color: #43433C;
+  font-size: 18px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-decoration: underline;
+}
+
+#player-score {
+  width: 200px;
+  text-align: center;
+  color: #43433C;
   font-size: 20px;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-
-div#score-container {
-  background-color: #F2D473;
-  text-align: left;
-  margin: auto;
-  height: 150px;
-  width: 500px;
-  border: 2px dotted #43433C;
+#comp-score-container {
+  float: right;
 }
 
-div#score-container h3 {
+#machine {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
-  text-decoration: underline;
-  font-family: "Lucida Console", Monaco, monospace;
   color: #43433C;
   font-size: 18px;
-  letter-spacing: 5px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-decoration: underline;
 }
 
+#comp-score {
+  width: 200px; 
+  text-align: center;
+  color: #43433C;
+  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#message {
+  height: 30px;
+  padding: 7px;
+  text-align: center;
+  color: #43433C;
+  font-size: 22px;
+  font-family: "Lucida Console", Monaco, monospace;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*Human-favoring or machine-favoring quote, depending on winner.*/
+#game-winner {
+  text-align: left;
+  color: #43433C;
+  padding: 5px;
+  width: 650px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+/*Reset button*/
+#button-holder {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#reset-button {
+  background-color: white;
+  color: #43433C;
+  font-family: Verdana, Geneva, sans-serif;
+  letter-spacing: 3px;
+  padding: 10px; 
+  width: 180px;
+  margin: 10px;
+  text-align: center;
+  font-size: 14px;
+}
 
 
 

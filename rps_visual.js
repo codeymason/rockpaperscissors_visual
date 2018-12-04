@@ -36,15 +36,15 @@ scissorsBtn.addEventListener('click', () => {
 function playRound(playerSelection, computerSelection) {
   switch (whoWins(playerSelection, computerSelection)) {  
     case "tie":
-      message.textContent = "It's a tie!";      
+      message.textContent = "TIE GAME!";      
       break;
     case "player":
       playerScore++;
-      message.textContent = "You win!";
+      message.textContent = "YOU WIN!";
       break;
     case "computer":
       compScore++;
-      message.textContent = "Computer wins!";
+      message.textContent = "MACHINE WINS!";
       break;
   }
   score();
@@ -82,14 +82,14 @@ function whoWins(playerSelection, computerSelection) {
 
 //display score; if player or computer score is equal to 5, declare winner and disable weapon buttons.
 function score() {
-  playerScoreBoard.textContent = `Human: ${playerScore}`;
-  compScoreBoard.textContent = `Machine: ${compScore}`;
+  playerScoreBoard.textContent = playerScore;
+  compScoreBoard.textContent = compScore;
   
   if (playerScore === 5) {
-    gameWinner.textContent = "You win this time! Want to try for another? Play again!";
+    gameWinner.textContent = "\"I've heard my teacher say, where there are machines, there are bound to be worries; where there are machine worries, there are bound to be machine hearts. With a machine heart in your breast, you've spoiled what was pure and simple; and without pure and simple, the life of the spirit knows no rest.\" -Zhuangzi";
     gameOver(); 
 } else if (compScore === 5) {
-    gameWinner.textContent = "The computer wins this round. Try again!";
+    gameWinner.textContent = "\"The real question is not whether machines think but whether men do. The mystery which surrounds a thinking machine already surrounds a thinking man.\" -B.F. Skinner";
     gameOver();
   }
 } 

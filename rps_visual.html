@@ -13,13 +13,20 @@
     <button type="button" id="paper">PAPER</button>
     <button type="button" id="scissors">SCISSORS</button>
   </div>
-  <div id="message"></div>
   <div id="score-container">
-    <h3>SCOREBOARD</h3>
-    <div id="player-score"></div>
-    <div id="comp-score"></div>
+    <div id="player-score-container">
+      <p id="human">HUMAN</p>
+      <div id="player-score"></div>
+    </div>
+    <div id="comp-score-container">
+      <p id="machine">MACHINE</p>
+      <div id="comp-score"></div>
+    </div>
+    <div id="message"></div>
   </div>
-  <div id="game-winner"></div>
-  <button type="button" id="reset-button">Play Again</button>
+  <p id="game-winner"></p>
+  <div id="button-holder">
+    <button type="button" id="reset-button">START AGAIN</button>
+  </div>
 </body>
 </html>
